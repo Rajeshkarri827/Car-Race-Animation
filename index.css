@@ -1,0 +1,47 @@
+body{
+    background: url(./road.webp);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    min-height:100vh;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+.ecars{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cars img{
+    height:170px;
+    width:170px;
+    margin:40px;
+    background: none;
+}
+@keyframes carrace{
+    0% {
+        transform: translateY(30vh);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+#car1 img {
+    animation: carrace 10s linear infinite;
+}
+
+#car2 img {
+    animation: carrace 7s linear infinite;
+}
+
+#car3 img {
+    animation: carrace 5s linear infinite;
+}
+
+#car4 img {
+    animation: carrace 3s linear infinite;
+}
