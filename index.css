@@ -1,27 +1,33 @@
-body{
+/* Base styles */
+body {
     background: url(./road.webp);
     background-position: center;
-    background-repeat:no-repeat;
-    background-size:cover;
-    min-height:100vh;
-    margin:0;
-    padding:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
-.ecars{
-    display:flex;
+
+.ecars {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap; 
 }
-.cars img{
-    height:170px;
-    width:170px;
-    margin:40px;
+
+.cars img {
+    height: 170px;
+    width: 170px;
+    margin: 40px;
     background: none;
 }
-@keyframes carrace{
+
+/* Animation */
+@keyframes carrace {
     0% {
         transform: translateY(30vh);
     }
@@ -30,6 +36,7 @@ body{
     }
 }
 
+/* Car animations */
 #car1 img {
     animation: carrace 10s linear infinite;
 }
@@ -44,4 +51,35 @@ body{
 
 #car4 img {
     animation: carrace 3s linear infinite;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+        height: 100vh;
+    }
+
+    .cars img {
+        height: 120px;
+        width: 80px;
+        margin:10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-size: contain;
+        background-position: center;
+        background-repeat:repeat;
+        height: 100vh;
+    }
+
+    .cars img {
+        height: 80px;
+        width: 40px;
+        margin:5px;
+    }
 }
